@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_convalidaciones_alumno,convalidaciones.alumno,model_convalidaciones_alumno,base.group_user,1,1,1,1
+access_convalidaciones_ciclo,convalidaciones.ciclo,model_convalidaciones_ciclo,base.group_user,1,1,1,1
+access_convalidaciones_conv,convalidaciones.conv,model_convalidaciones_conv,base.group_user,1,1,1,1
+access_convalidaciones_modulo,convalidaciones.modulo,model_convalidaciones_modulo,base.group_user,1,1,1,1

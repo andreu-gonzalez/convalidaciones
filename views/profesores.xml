@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="convalidaciones.listado_profesores_tree">
+            <field name="name">Profesores</field>
+            <field name="model">convalidaciones.profesores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="apellidos" />
+                    <field name="fotografia" />
+                    <field name="edad" />
+                    <field name="dni" />
+                 
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="convalidaciones.listado_profesores_form">
+            <field name="name">Profesores</field>
+            <field name="model">convalidaciones.profesores</field>
+            <field name="arch" type="xml">
+                <form string="Nuevo Profesores">
+                    
+                    <sheet>
+                        <group name="Grupo">
+                            <field name="name" />
+                            <field name="apellidos" />
+                            <field name="fotografia" />
+                            <field name="edad" />
+                            <field name="dni" />
+                            <field name="alumnos"/>
+                            <field name="numalumnos" readonly="True"/>
+                        </group>
+                            
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="convalidaciones.action_window_profesores">
+            <field name="name">Profesores</field>
+            <field name="res_model">convalidaciones.profesores</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="convalidaciones.listado_alumno_tree">
+            <field name="name">Alumno</field>
+            <field name="model">convalidaciones.alumno</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="contra" />
+                    <field name="fotografia" />
+                    <field name="edad" />
+                    <field name="localidad" />
+                    <field name="provincia" />
+                    <field name="email" widget="email"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="convalidaciones.listado_alumno_form">
+            <field name="name">Alumno</field>
+            <field name="model">convalidaciones.alumno</field>
+            <field name="arch" type="xml">
+                <form string="Nuevo Alumno">
+                    <header>
+
+                        <button name="generarCon" type="object" string="Generar Contraseña" />
+
+                    </header>
+                    <sheet>
+                      
+                         <notebook>
+                           
+                             <page string="datos_importantes">
+                              <group name="Grupo">
+                                 <h1>
+                                    <field name="name" />
+                                </h1>    
+                                <field name="fotografia" widget="image" />
+                                <field name="contra" />
+                                <field name="edad" />
+                                </group>
+                            </page>
+                            <page string="datos personales">
+                             <group name="Grupo">
+                                <field name="localidad" />
+                                <field name="provincia" />
+                                <field name="email" widget="email"/>
+                              </group>  
+                            </page>
+                             <page string="convalidaciones">
+                                <field name="convalidaciones"/>
+                            </page>
+                            
+                            <page>
+                                <group string="profesores"> 
+                                    <field name="profesores" />
+                                </group>
+                            </page>
+                            
+                         </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="convalidaciones.action_window_alumno">
+            <field name="name">Alumno</field>
+            <field name="res_model">convalidaciones.alumno</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>
